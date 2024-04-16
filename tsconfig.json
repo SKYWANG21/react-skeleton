@@ -47,7 +47,7 @@
     "moduleResolution": "node",
     "types": [
       "node",
-      // "vite/client",
+      "vite/client",
       // "./typings"
     ],
     "paths": {
