@@ -15,7 +15,7 @@ export default defineConfig({
     UnoCSS(),
     AutoImport({
       imports: ["react", "react-router-dom"],
-      dirs: ["./src/store/modules"],
+      // dirs: ["./src/utils/*", './src/api/*'],
       dts: "typings/auto-imports.d.ts",
     }),
   ],
