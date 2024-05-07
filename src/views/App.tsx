@@ -1,7 +1,7 @@
 import { useEffect, useState, createContext, useContext, useReducer, Fragment } from "react";
 import "@/assets/App.css";
 import { Outlet, useNavigate } from "react-router-dom";
-import React from "react";
+import React, { Suspense } from "react";
 
 interface Count {
   count: number;
@@ -105,7 +105,9 @@ function App() {
       <div className="w-full h-200px grid grid-cols-2">
         <button onClick={() => nav("/first")}>go first</button>
         <button onClick={() => nav("/second")}>go second</button>
-        <Outlet></Outlet>
+        <Suspense>
+          <Outlet></Outlet>
+        </Suspense>
       </div>
     </>
   );

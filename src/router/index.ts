@@ -4,6 +4,10 @@ import { createBrowserRouter } from "react-router-dom";
 const routes = createBrowserRouter([
   {
     path: "/",
+    Component: lazy(() => import("@/views/layout")),
+  },
+  {
+    path: "/app",
     Component: lazy(() => import("@/views/App")),
     children: [
       {
