@@ -7,17 +7,14 @@
     "noLib": false,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "baseUrl": ".",
     "allowJs": true,
     "checkJs": false,
     "sourceMap": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "removeComments": true, // 删除编译后的所有的注释
     "noEmit": true, // 不生成输出文件
     /** 严格检查*/
@@ -47,18 +44,14 @@
     "moduleResolution": "node",
     "types": [
       "node",
-      "vite/client",
+      "vite/client"
       // "./typings"
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "references": [
     {
       "path": "./tsconfig.node.json"
