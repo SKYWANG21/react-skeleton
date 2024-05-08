@@ -11,11 +11,11 @@ const routes = createBrowserRouter([
     Component: lazy(() => import("@/views/App")),
     children: [
       {
-        path: "/first",
+        path: "/app/first",
         Component: lazy(() => import("@/views/first")),
       },
       {
-        path: "/second",
+        path: "/app/second",
         Component: lazy(() => import("@/views/second")),
       },
     ],
