@@ -1,15 +1,17 @@
-import { title } from "process";
-import React, { ComponentType, FunctionComponent, lazy } from "react";
+import React, { FunctionComponent, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 const setTitles = (Components: FunctionComponent, meta) => {
-  return () => <Components {...meta}></Components>
-}
+  return () => <Components {...meta}></Components>;
+};
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    Component: setTitles(lazy(() => import("@/views/layout")), { title: '首页' }),
+    Component: setTitles(
+      lazy(() => import("@/views/layout")),
+      { title: "首页" }
+    ),
   },
   {
     path: "/app",
@@ -24,6 +26,14 @@ const routes = createBrowserRouter([
         Component: lazy(() => import("@/views/second")),
       },
     ],
+  },
+  {
+    path: "/html2xml",
+    Component: lazy(() => import("@/views/html2xml")),
+  },
+  {
+    path: "/postMessage",
+    Component: lazy(() => import("@/views/postMessage")),
   },
 ]);
 export default routes;

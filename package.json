@@ -13,6 +13,8 @@
     "@material-ui/core": "^4.12.4",
     "@unocss/preset-rem-to-px": "^0.56.5",
     "@unocss/transformer-directives": "^0.54.3",
+    "file-saver": "^2.0.5",
+    "html-docx-js-typescript": "^0.1.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.0",

@@ -1,7 +1,14 @@
-import { useEffect, useState, createContext, useContext, useReducer } from "react";
+import {
+  useEffect,
+  useState,
+  createContext,
+  useContext,
+  useReducer,
+} from "react";
 import "@/assets/App.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import React, { Suspense } from "react";
+import { Button } from "@material-ui/core";
 
 interface Count {
   count: number;
@@ -13,6 +20,7 @@ const numberProvider = createContext<Count | null>(null);
 function Container() {
   const { count, setCount } = useContext(numberProvider) as Count;
   const [text, setText] = useState(count);
+
   function add1() {
     return setCount(count + 1);
   }
@@ -102,9 +110,19 @@ function App() {
         </div>
       </numberProvider.Provider>
       <Reducer></Reducer>
+      <Button variant="outlined" onClick={() => nav("/html2xml")}>
+        go html2xml
+      </Button>
+      <Button variant="outlined" onClick={() => nav("/postMessage")}>
+        go postMessage
+      </Button>
       <div className="w-full h-200px grid grid-cols-2">
-        <button onClick={() => nav("/first")}>go first</button>
-        <button onClick={() => nav("/second")}>go second</button>
+        <Button type="submit" onClick={() => nav("/app/first")}>
+          go first
+        </Button>
+        <Button type="reset" onClick={() => nav("/app/second")}>
+          go second
+        </Button>
         <Suspense>
           <Outlet></Outlet>
         </Suspense>
