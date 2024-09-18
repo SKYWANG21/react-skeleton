@@ -5,7 +5,6 @@ import {
   useContext,
   useReducer,
 } from "react";
-import "@/assets/App.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import React, { Suspense } from "react";
 import { Button } from "@material-ui/core";

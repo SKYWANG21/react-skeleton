@@ -11,15 +11,6 @@ export default function () {
     console.log(e);
   });
 
-  const mapping: Record<number, <T>(data: T) => void> = {
-    0: (data: number) => {
-      console.log(data);
-    },
-    1: ({ arg1, arg2 }: { arg1: number; arg2: number }) => {
-      arg1 + arg2;
-    },
-  };
-
   function pushMsg() {
     window.top?.postMessage(
       { msg, time: new Date().getUTCMinutes() },
