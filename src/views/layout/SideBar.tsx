@@ -1,8 +1,11 @@
-import React from "react";
 import { Paper, MenuItem, MenuList } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { syncRoutes } from "@/router";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import { syncRoutes } from "@/router";
+
+import SideBarTitle from "./SideBarTitle";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,6 +26,8 @@ export default function MenuListComposition() {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <MenuList>
+          <SideBarTitle className="ml-1rem"></SideBarTitle>
+
           {syncRoutes.map((it) => {
             return (
               <MenuItem key={it.path} onClick={() => nav(it.path!)}>

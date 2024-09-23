@@ -9,6 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "resolutions": {
+    "tslib": "^2.3.0"
+  },
   "dependencies": {
     "@antv/g2": "^5.2.3",
     "@material-ui/core": "^4.12.4",
@@ -31,6 +34,8 @@
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.5.4",

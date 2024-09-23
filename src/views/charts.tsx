@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Chart } from "@antv/g2";
+import React from "react";
 
 export default function Charts() {
   return <div>Charts</div>;

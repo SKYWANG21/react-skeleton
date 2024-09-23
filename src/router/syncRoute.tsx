@@ -1,7 +1,8 @@
-import { AppRouteObject } from "#/router";
 import React, { FunctionComponent, lazy } from "react";
 
-const setTitles = (Components: FunctionComponent, meta?) => {
+import { AppRouteObject } from "#/router";
+
+const _setTitles = (Components: FunctionComponent, meta?) => {
   return () => <Components {...meta}></Components>;
 };
 

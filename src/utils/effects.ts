@@ -1,7 +1,10 @@
 declare type Timeout = ReturnType<typeof setTimeout>;
 
 /** 数字自增 */
-export function numberAutoIncrease(el: HTMLElement, binding: { value: number | string; duration: number }) {
+export function numberAutoIncrease(
+  el: HTMLElement,
+  binding: { value: number | string; duration: number }
+) {
   const { value, duration } = binding;
   let timer: null | Timeout = null;
   // 最终要显示的数字
@@ -15,10 +18,13 @@ export function numberAutoIncrease(el: HTMLElement, binding: { value: number | s
 
   // 重复则不执行
   if (value.toString() === el.innerText) return;
-  typeof value == "number" ? (finalNum = value) : (finalNum = parseFloat(value.replace(/[\,]/g, "")));
+  typeof value == "number"
+    ? (finalNum = value)
+    : // eslint-disable-next-line no-useless-escape
+      (finalNum = parseFloat(value.replace(/[\,]/g, "")));
 
   if (!step) {
-    if (!!timer) clearInterval(timer as Timeout);
+    if (timer) clearInterval(timer as Timeout);
     timer = null;
     el.innerText = "0";
     return;
@@ -27,7 +33,9 @@ export function numberAutoIncrease(el: HTMLElement, binding: { value: number | s
   let count = 0;
   timer = setInterval(() => {
     count = count + step;
-    el.innerText === count.toFixed(0) ? true : (el.innerText = count.toFixed(0));
+    el.innerText === count.toFixed(0)
+      ? true
+      : (el.innerText = count.toFixed(0));
     if (count > finalNum) {
       //  避免count大于finalNum最终数字显示不对
       count = finalNum;

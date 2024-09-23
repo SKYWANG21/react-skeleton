@@ -1,7 +1,8 @@
+import { Grid } from "@material-ui/core";
 import React, { Suspense } from "react";
 import { Outlet } from "react-router-dom";
+
 import SideBar from "./SideBar";
-import { Grid } from "@material-ui/core";
 
 export default function home() {
   return (

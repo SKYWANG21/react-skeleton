@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import {
   useEffect,
   useState,
@@ -5,9 +6,8 @@ import {
   useContext,
   useReducer,
 } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
-import React, { Suspense } from "react";
-import { Button } from "@material-ui/core";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Count {
   count: number;
@@ -115,17 +115,6 @@ function App() {
       <Button variant="outlined" onClick={() => nav("/postMessage")}>
         go postMessage
       </Button>
-      <div className="w-full h-200px grid grid-cols-2">
-        <Button type="submit" onClick={() => nav("/app/first")}>
-          go first
-        </Button>
-        <Button type="reset" onClick={() => nav("/app/second")}>
-          go second
-        </Button>
-        <Suspense>
-          <Outlet></Outlet>
-        </Suspense>
-      </div>
     </>
   );
 }
