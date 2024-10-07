@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { asBlob } from "html-docx-js-typescript";
 import { saveAs } from "file-saver";
+import { asBlob } from "html-docx-js-typescript";
+import React, { useEffect, useState } from "react";
+
 import img from "@/assets/syberpunk.jpg";
 
 function Output(props) {
@@ -18,11 +19,11 @@ function Output(props) {
   );
 }
 
-export default function () {
+export default function Html2Xml() {
   const [html, setHtml] = useState("");
   useEffect(() => {
     setHtml(document.getElementById("html")?.innerHTML as string);
-  });
+  }, []);
 
   return (
     <>

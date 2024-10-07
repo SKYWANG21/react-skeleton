@@ -1,9 +1,11 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import routes from "./router";
-import "./assets/index.css";
 import { RouterProvider } from "react-router-dom";
+
 import "uno.css";
+
+import "./assets/index.css";
+import routes from "./router";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

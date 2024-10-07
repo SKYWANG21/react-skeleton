@@ -1,7 +1,7 @@
 import { Button, Input } from "@material-ui/core";
 import React, { useState } from "react";
 
-export default function () {
+export default function PostMessage() {
   const [msg, setMsg] = useState("");
   function change(e) {
     setMsg(e.target.value);

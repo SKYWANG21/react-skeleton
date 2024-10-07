@@ -1,6 +1,8 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
+
 import { syncRoutes } from "./syncRoute";
+
 import { AppRouteObject } from "#/router";
 
 function createRoute(data: AppRouteObject[]) {
