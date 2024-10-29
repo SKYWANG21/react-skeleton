@@ -22,7 +22,13 @@ function createRoute(data: AppRouteObject[]) {
   ];
 }
 
-const routes = createBrowserRouter(createRoute(syncRoutes));
+const routes = createBrowserRouter([
+  ...createRoute(syncRoutes),
+  {
+    path: "/login",
+    Component: lazy(() => import("@/views/login")),
+  },
+]);
 export default routes;
 
 export * from "./syncRoute";

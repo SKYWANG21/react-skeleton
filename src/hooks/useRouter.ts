@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export function useRouter() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const router = useMemo(
     () => ({
@@ -11,8 +12,9 @@ export function useRouter() {
       reload: () => window.location.reload(),
       push: (href: string) => navigate(href),
       replace: (href: string) => navigate(href, { replace: true }),
+      pathname: location.pathname,
     }),
-    [navigate]
+    [navigate, location]
   );
 
   return router;
