@@ -36,7 +36,6 @@
   font-weight: 100;
   position: relative;
   top: 1em;
-  text-transform: lowercase;
 }
 
 .wave:nth-child(2),
@@ -98,7 +97,6 @@
   letter-spacing: 3px;
   font-size: 2em;
   font-family: "Arial";
-  text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px var(--stroke-color);
   cursor: pointer;

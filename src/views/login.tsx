@@ -68,9 +68,9 @@ function Form() {
       ))}
       <div className="flex justify-center" onClick={() => nav("/app")}>
         <div className={cssModel.button} data-text="Awesome">
-          <span className={cssModel.actualText}>&nbsp;LOGIN&nbsp;</span>
+          <span className={cssModel.actualText}>&nbsp;Sign&nbsp;Up&nbsp;</span>
           <span aria-hidden="true" className={cssModel.frontText}>
-            &nbsp;LOGIN&nbsp;
+            &nbsp;Sign&nbsp;Up&nbsp;
           </span>
         </div>
       </div>
