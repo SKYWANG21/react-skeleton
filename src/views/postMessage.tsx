@@ -1,6 +1,10 @@
 import { Button, Input } from "@material-ui/core";
 import React, { useState } from "react";
 
+function decorator() {}
+
+decorator();
+
 export default function PostMessage() {
   const [msg, setMsg] = useState("");
   function change(e) {

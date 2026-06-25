@@ -1,4 +1,5 @@
 import * as echarts from "echarts";
+import { useState } from "react";
 
 export class BasicChart {
   constructor(public element: HTMLElement) {}

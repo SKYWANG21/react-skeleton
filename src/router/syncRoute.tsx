@@ -32,4 +32,9 @@ export const syncRoutes: AppRouteObject[] = [
     Component: lazy(() => import("@/views/CaptureScreenRecord")),
     meta: { label: "screenRecord" },
   },
+  {
+    path: "signature",
+    Component: lazy(() => import("@/views/signature")),
+    meta: { label: "signature" },
+  },
 ];
