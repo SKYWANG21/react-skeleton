@@ -37,4 +37,9 @@ export const syncRoutes: AppRouteObject[] = [
     Component: lazy(() => import("@/views/signature")),
     meta: { label: "signature" },
   },
+  {
+    path: "audioEditor",
+    Component: lazy(() => import("@/views/AudioEditor/Index")),
+    meta: { label: "audioEditor" },
+  },
 ];
